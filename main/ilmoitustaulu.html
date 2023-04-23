@@ -11,21 +11,27 @@
 </head>
 
 <body>
-    <main>
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-8 text-center">
-                <h1 class="display-4">Welcome to My Website</h1>
-                <p class="lead">This is a generic hero section for your website built with Bootstrap.</p>
-                <a href="#" class="btn btn-primary">Jätä viesti ilmoitustaululle</a>
-              </div>
+    <div class="container mt-5">
+        <h1>Ilmoitustaulu</h1>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="nameInput">Nimi:</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Nimi">
             </div>
-        </div>
-    </main>
+            <div class="form-group">
+                <label for="messageInput">Viesti:</label>
+                <textarea class="form-control" id="messageInput" rows="3" placeholder="Viesti"></textarea>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="importantCheckbox">
+                <label class="form-check-label" for="importantCheckbox">Merkitse tärkeäksi</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Lähetä</button>
+        </form>
         <hr>
         <h2>Viestihistoria</h2>
         <h2 id="firstLoad">0</h2>
-        <ul id="messageList" class="list-group">
+        <ul id="messageList" class="list-group" loaded="no">
             <!-- Viestit generoituvat tänne -->
         </ul>
     </div>
@@ -33,6 +39,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="generate-message-history.js"></script>
+    <script src="submit-form.js"></script>
 </body>
 
 </html>
