@@ -1,6 +1,4 @@
 const messageList = document.getElementById('messageList');
-var firstLoad = document.getElementById('firstLoad')
-var firstLoadValue = firstLoad.innerHTML;
 
 function getAndDisplayMessages() {
     const messages = JSON.parse(localStorage.getItem('messages')) || []; // Get array or create new
@@ -17,17 +15,10 @@ function getAndDisplayMessages() {
     });
 }
 
-if (firstLoadValue !== '0'){
-  setInterval(() => {
-    getAndDisplayMessages()
-  }, 2000); // Update the list every 2 seconds
-} else {
+getAndDisplayMessages()
+
+setInterval(() => {
   getAndDisplayMessages()
-  firstLoad.style.display = 'none';
-  firstLoad.textContent = '1';
-  setInterval(() => {
-    getAndDisplayMessages()
-  }, 2000); // Update the list every 2 seconds
-}
+}, 2000); // Update the list every 2 seconds
   
 window.addEventListener('load', getAndDisplayMessages);

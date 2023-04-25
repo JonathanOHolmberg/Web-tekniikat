@@ -1,4 +1,4 @@
-h1 {
+h1, h2 {
     display: flex;
     justify-content: center;
     font-weight: 700;
@@ -19,3 +19,16 @@ button.btn.btn-primary {
     display: flex;
     justify-content: center;
 }
+
+.list-group {
+    height: 600px;
+    list-style-type: none !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  .list-group-item {
+    padding: 10px !important;
+    border: none !important;
+    background: #ccc !important;
+  }
