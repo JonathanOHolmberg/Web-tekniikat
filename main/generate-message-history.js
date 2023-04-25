@@ -1,24 +1,24 @@
-const messageList = document.getElementById('messageList');
+const messageListMen = document.getElementById('messageListMen');
 
-function getAndDisplayMessages() {
-    const messages = JSON.parse(localStorage.getItem('messages')) || []; // Get array or create new
-    messageList.innerHTML = '';
-    messages.reverse().forEach(messageData => { // reverse the order of the list to show latest first
-      const { name, message, dateTime, important } = messageData;
+function getAndDisplayMessagesMen() {
+    const messagesMen = JSON.parse(localStorage.getItem('messages')) || []; // Get array or create new
+    messageListMen.innerHTML = '';
+    messagesMen.reverse().forEach(messageDataMen => { // reverse the order of the list to show latest first
+      const { name, message, dateTime, important } = messageDataMen;
       const listItem = document.createElement('li');
-      listItem.className = 'list-group-item';
+      listItem.className = 'list-group-item-men';
       listItem.textContent = `${name}: ${message} (${dateTime})`;
       if (important) {
         listItem.style.fontWeight = 'bold';
       }
-      messageList.appendChild(listItem);
+      messageListMen.appendChild(listItem);
     });
 }
 
-getAndDisplayMessages()
+getAndDisplayMessagesMen()
 
 setInterval(() => {
-  getAndDisplayMessages()
+  getAndDisplayMessagesMen()
 }, 2000); // Update the list every 2 seconds
   
-window.addEventListener('load', getAndDisplayMessages);
+window.addEventListener('load', getAndDisplayMessagesMen);

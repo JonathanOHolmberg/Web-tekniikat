@@ -11,7 +11,7 @@ function submitForm(event) {
     const important = importantCheckbox.checked;
     const dateTime = new Date().toLocaleString();
 
-    listItem.className = 'list-group-item';
+    listItem.className = 'list-group-item-men';
     listItem.textContent = `${name}: ${message} (${dateTime})`;
 
 
@@ -31,17 +31,17 @@ function submitForm(event) {
     checkImportant()
 
 
-    document.getElementById('messageList').appendChild(listItem);
+    document.getElementById('messageListMen').appendChild(listItem);
 
-    const messageData = {
+    const messageDataMen = {
         name: name,
         message: message,
         dateTime: dateTime,
         important: important
     };
 
-    const messages = JSON.parse(localStorage.getItem('messages')) || []; // Get array or create new
-    messages.push(messageData); // Add message
+    const messagesMen = JSON.parse(localStorage.getItem('messagesMen')) || []; // Get array or create new
+    messagesMen.push(messageData); // Add message
     localStorage.setItem('messages', JSON.stringify(messages)); // Save array
 
 
@@ -57,4 +57,4 @@ function submitForm(event) {
 
 
 document.getElementById('myForm').addEventListener('submit', submitForm);
-window.addEventListener('load', getAndDisplayMessages);
+window.addEventListener('load', getAndDisplayMessagesMen);
