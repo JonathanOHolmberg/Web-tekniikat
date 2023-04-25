@@ -4,14 +4,14 @@ function submitFormGirls(event) {
     const nameInput = document.getElementById('nameInput');
     const messageInput = document.getElementById('messageInput');
     const importantCheckbox = document.getElementById('importantCheckbox');
-    const listItem = document.createElement('li');
+    const listItemGirls = document.createElement('li');
     
     const name = nameInput.value;
     const message = messageInput.value;
     const important = importantCheckbox.checked;
     const dateTime = new Date().toLocaleString();
 
-    listItemGirls.className = 'list-group-item-girls';
+    listItemGirls.className = 'list-group-girls-item';
     listItemGirls.textContent = `${name}: ${message} (${dateTime})`;
 
 
@@ -25,7 +25,7 @@ function submitFormGirls(event) {
 
     function checkImportant() {
       if (important) {
-        listItem.style.fontWeight = 'bold';
+        listItemGirls.style.fontWeight = 'bold';
       }
     }
     checkImportant()
@@ -42,7 +42,7 @@ function submitFormGirls(event) {
 
     const messagesGirls = JSON.parse(localStorage.getItem('messagesGirls')) || []; // Get array or create new
     messagesGirls.push(messageDataGirls); // Add message
-    localStorage.setItem('messagesGirls', JSON.stringify(messagesGirl)); // Save array
+    localStorage.setItem('messagesGirls', JSON.stringify(messagesGirls)); // Save array
 
 
     function resetFormFields() {
@@ -51,10 +51,10 @@ function submitFormGirls(event) {
     importantCheckbox.checked = false;
     }
     resetFormFields()
-    getAndDisplayMessages()
+    getAndDisplayMessagesGirls()
 }
 
 
 
-document.getElementById('myFormGirls').addEventListener('submit', submitFormBoys);
+document.getElementById('myFormGirls').addEventListener('submit', submitFormGirls);
 window.addEventListener('load', getAndDisplayMessagesGirls);

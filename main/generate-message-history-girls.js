@@ -1,4 +1,4 @@
-const messageListGirls = document.getElementById('messageListMen');
+const messageListGirls = document.getElementById('messageListGirls');
 
 function getAndDisplayMessagesGirls() {
     const messagesGirls = JSON.parse(localStorage.getItem('messagesGirls')) || []; // Get array or create new
@@ -6,7 +6,7 @@ function getAndDisplayMessagesGirls() {
     messagesGirls.reverse().forEach(messageDataGirls => { // reverse the order of the list to show latest first
       const { name, message, dateTime, important } = messageDataGirls;
       const listItemGirls = document.createElement('li');
-      listItemGirls.className = 'list-group-item-girls';
+      listItemGirls.className = 'list-group-girls-item';
       listItemGirls.textContent = `${name}: ${message} (${dateTime})`;
       if (important) {
         listItemGirls.style.fontWeight = 'bold';

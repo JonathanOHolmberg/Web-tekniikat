@@ -1,3 +1,9 @@
+body {
+    padding-left:2em;
+    padding-right:2em;
+    padding-top:1em
+}
+
 h1, h2 {
     display: flex;
     justify-content: center;
@@ -15,20 +21,26 @@ h1, h2 {
 }
 
 button.btn.btn-primary {
-    width: 40%;
+    width: 60%;
     display: flex;
     justify-content: center;
 }
 
-.list-group {
-    height: 600px;
+.list-group-boys, .list-group-girls {
+    max-height: 600px;
+    min-height: 200px;
     list-style-type: none !important;
     padding: 0;
     margin: 0;
   }
 
-  .list-group-item {
+  .list-group-boys-item {
     padding: 10px !important;
     border: none !important;
     background: #ccc !important;
+  }
+  .list-group-girls-item {
+    padding: 10px !important;
+    border: none !important;
+    background: #aaa !important;
   }

@@ -7,7 +7,7 @@ function getAndDisplayTopFiveBoys() {
   latestMessagesBoys.forEach(messageDataBoys => {
     const { name, message, dateTime, important } = messageDataBoys;
     const listItemBoys = document.createElement('li');
-    listItemBoys.className = 'list-group-item-boys';
+    listItemBoys.className = 'list-group-boys-item';
     listItemBoys.textContent = `${name}: ${message} (${dateTime})`;
     if (important) {
       listItemBoys.style.fontWeight = 'bold';

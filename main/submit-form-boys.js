@@ -4,14 +4,14 @@ function submitFormBoys(event) {
     const nameInput = document.getElementById('nameInput');
     const messageInput = document.getElementById('messageInput');
     const importantCheckbox = document.getElementById('importantCheckbox');
-    const listItem = document.createElement('li');
+    const listItemBoys = document.createElement('li');
     
     const name = nameInput.value;
     const message = messageInput.value;
     const important = importantCheckbox.checked;
     const dateTime = new Date().toLocaleString();
 
-    listItemBoys.className = 'list-group-item-boys';
+    listItemBoys.className = 'list-group-boys-item';
     listItemBoys.textContent = `${name}: ${message} (${dateTime})`;
 
 
@@ -25,7 +25,7 @@ function submitFormBoys(event) {
 
     function checkImportant() {
       if (important) {
-        listItem.style.fontWeight = 'bold';
+        listItemBoys.style.fontWeight = 'bold';
       }
     }
     checkImportant()
