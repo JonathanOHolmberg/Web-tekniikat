@@ -1,25 +1,25 @@
-const messageListMen = document.getElementById('messageList');
+const messageListGirls = document.getElementById('messageListGirls');
 
-function getAndDisplayTopFiveMen() {
-  const messagesMen = JSON.parse(localStorage.getItem('messages')) || [];
-  const latestMessages = messages.slice(-5).reverse(); // Get the latest 5 messages and reverse the order
-  messageListMen.innerHTML = '';
-  latestMessages.forEach(messageData => {
-    const { name, message, dateTime, important } = messageData;
-    const listItem = document.createElement('li');
-    listItem.className = 'list-group-item';
-    listItem.textContent = `${name}: ${message} (${dateTime})`;
+function getAndDisplayTopFiveGirls() {
+  const messagesGirls = JSON.parse(localStorage.getItem('messagesGirls')) || [];
+  const latestMessagesGirls = messages.slice(-5).reverse(); // Get the latest 5 messages and reverse the order
+  messageListGirls.innerHTML = '';
+  latestMessagesGirls.forEach(messageDataGirls => {
+    const { name, message, dateTime, important } = messageDataGirls;
+    const listItemGirls = document.createElement('li');
+    listItemGirls.className = 'list-group-item-girls';
+    listItemGirls.textContent = `${name}: ${message} (${dateTime})`;
     if (important) {
-      listItem.style.fontWeight = 'bold';
+      listItemGirls.style.fontWeight = 'bold';
     }
-    messageListMen.appendChild(listItem);
+    messageListGirls.appendChild(listItemGirls);
   });
 }
 
-getAndDisplayTopFiveMen();
+getAndDisplayTopFiveGirls();
 
 setInterval(() => {
-  getAndDisplayTopFiveMen();
+  getAndDisplayTopFiveGirls();
 }, 2000);
 
-window.addEventListener('load', getAndDisplayTopFiveMen);
+window.addEventListener('load', getAndDisplayTopFiveGirls);

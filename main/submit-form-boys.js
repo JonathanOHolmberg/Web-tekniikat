@@ -1,4 +1,4 @@
-function submitForm(event) {
+function submitFormBoys(event) {
     event.preventDefault(); // Prevent form submission and page reload
 
     const nameInput = document.getElementById('nameInput');
@@ -11,8 +11,8 @@ function submitForm(event) {
     const important = importantCheckbox.checked;
     const dateTime = new Date().toLocaleString();
 
-    listItem.className = 'list-group-item-men';
-    listItem.textContent = `${name}: ${message} (${dateTime})`;
+    listItemBoys.className = 'list-group-item-boys';
+    listItemBoys.textContent = `${name}: ${message} (${dateTime})`;
 
 
     function checkInputFields() {
@@ -31,18 +31,18 @@ function submitForm(event) {
     checkImportant()
 
 
-    document.getElementById('messageListMen').appendChild(listItem);
+    document.getElementById('messageListBoys').appendChild(listItemBoys);
 
-    const messageDataMen = {
+    const messageDataBoys = {
         name: name,
         message: message,
         dateTime: dateTime,
         important: important
     };
 
-    const messagesMen = JSON.parse(localStorage.getItem('messagesMen')) || []; // Get array or create new
-    messagesMen.push(messageData); // Add message
-    localStorage.setItem('messages', JSON.stringify(messages)); // Save array
+    const messagesBoys = JSON.parse(localStorage.getItem('messagesBoys')) || []; // Get array or create new
+    messagesBoys.push(messageDataBoys); // Add message
+    localStorage.setItem('messagesBoys', JSON.stringify(messagesBoys)); // Save array
 
 
     function resetFormFields() {
@@ -56,5 +56,5 @@ function submitForm(event) {
 
 
 
-document.getElementById('myForm').addEventListener('submit', submitForm);
-window.addEventListener('load', getAndDisplayMessagesMen);
+document.getElementById('myFormBoys').addEventListener('submit', submitFormBoys);
+window.addEventListener('load', getAndDisplayMessagesBoys);
