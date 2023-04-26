@@ -8,6 +8,7 @@ function getAndDisplayMessagesGirls() {
       const listItemGirls = document.createElement('li');
       listItemGirls.className = 'list-group-girls-item';
       listItemGirls.textContent = `${name}: ${message} (${dateTime})`;
+      listItemGirls.style.marginBottom = "4px"
       if (important) {
         listItemGirls.style.fontWeight = 'bold';
       }

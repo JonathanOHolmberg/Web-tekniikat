@@ -23,16 +23,13 @@
                 <a class="nav-link active" aria-current="page" href="#">Front page</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Wireframe</a>
+                <a class="nav-link active" aria-current="page" href="#">Boys</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Gossip
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Boys Gossip</a></li>
-                  <li><a class="dropdown-item" href="#">Girls Gossip</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Girls</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Wireframe</a>
               </li>
             </ul>
           </div>
@@ -40,34 +37,35 @@
       </nav>
   </header>
 <body>
-    <main>
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-8 text-center">
-                <h1 class="display-4">Gossip page</h1>
-                <p class="lead">Leave some gossip about a girl or a boy</p>
-                <a href="#" class="btn btn-primary">Gossip boys</a>
-                <a href="#" class="btn btn-primary">Gossip girls</a>
-              </div>
-            </div>
-        </div>
-    </main>
-        <hr>
-        <h2>Latest gossip:</h2>
-        <h3>Boys</h3>
+  <main>
+    <div class="container" class="bg-gradient">
+      <div class="row justify-content-center align-items-center">
+          <div class="col-md-8 text-center">
+            <h1 class="display6">Leave some gossip about a girl or a boy.</h1>
+              <a href="#" class="btn btn-primary">Boys</a>
+              <a href="#" class="btn btn-primary">Girls</a>
+          </div>
+      </div>
+    </div>
+      <div class="bg-info-subtle">
+        <h5 class="h5">Latest gossip</h5>
+        <h3 class="display-6">Boys</h3>
         <ul id="messageListBoys" class="list-group-boys">
             <!-- Viestit generoituvat tänne -->
         </ul>
-        <h3>Girls</h3>
+        <h3 class="display-6">Girls</h3>
         <ul id="messageListGirls" class="list-group-girls">
             <!-- Viestit generoituvat tänne -->
         </ul>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="generate-top-five-messages-boys.js"></script>
-    <script src="generate-top-five-messages-girls.js"></script>
+    <script src="generate-top-three-messages-boys.js"></script>
+    <script src="generate-top-three-messages-girls.js"></script>
+  </main>
 </body>
+
 
 </html>

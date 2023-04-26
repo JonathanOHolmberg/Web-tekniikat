@@ -1,13 +1,30 @@
 body {
     padding-left:2em;
     padding-right:2em;
-    padding-top:1em
+    padding-top:1em;
+    background-image: var(--bs-gradient)!important;
+    background-color: #F8F9FA !important;
 }
 
-h1, h2 {
+h1, h2, h3, h5 {
     display: flex;
     justify-content: center;
     font-weight: 700;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-weight:900;
+    margin-bottom:20px !important;
+}
+
+h1 {
+    margin-bottom:20px !important;
+}
+
+.bg-info-subtle {
+    margin: 1em;
+    padding: 1em;
 }
 
 .form-group {
@@ -24,14 +41,20 @@ button.btn.btn-primary {
     width: 60%;
     display: flex;
     justify-content: center;
+    text-transform: uppercase;
+    border-radius: 0px;
+}
+a.btn.btn-primary {
+    width: 40%;
+    text-transform: uppercase;
+    border-radius: 0px;
 }
 
 .list-group-boys, .list-group-girls {
-    max-height: 600px;
-    min-height: 200px;
+    max-height: 250px;
     list-style-type: none !important;
-    padding: 0;
-    margin: 0;
+    padding: 2px;
+    margin-bottom: 20px;
   }
 
   .list-group-boys-item {
@@ -39,8 +62,18 @@ button.btn.btn-primary {
     border: none !important;
     background: #ccc !important;
   }
+
   .list-group-girls-item {
     padding: 10px !important;
     border: none !important;
     background: #aaa !important;
   }
+
+  ul.navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+li.nav-item {
+    margin: 3px;
+}
