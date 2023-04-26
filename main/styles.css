@@ -3,7 +3,18 @@ body {
     padding-right:2em;
     padding-top:1em;
     background-image: var(--bs-gradient)!important;
-    background-color: #F8F9FA !important;
+    background-color: #9aeaa0 !important;
+}
+
+nav.navbar {
+    background: #9aeaa4 !important;
+}
+
+main {
+    background-color: #9aeaa4;
+    border-radius: 1px;
+    padding:9px;
+    margin-bottom:20px;
 }
 
 h1, h2, h3, h5 {
@@ -11,6 +22,7 @@ h1, h2, h3, h5 {
     justify-content: center;
     font-weight: 700;
     text-transform: uppercase;
+    color:#fff !important;
 }
 
 h5 {
@@ -19,9 +31,8 @@ h5 {
 }
 
 h1 {
-    margin-bottom:20px !important;
+    margin: 40px !important;
 }
-
 .bg-info-subtle {
     margin: 1em;
     padding: 1em;
@@ -42,12 +53,16 @@ button.btn.btn-primary {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
-    border-radius: 0px;
+    border-radius: 1px;
 }
 a.btn.btn-primary {
     width: 40%;
     text-transform: uppercase;
-    border-radius: 0px;
+    border-radius: 1px;
+    margin-left: 4px;
+    margin-right:4px;
+    margin-top:20px;
+    margin-bottom:10px;
 }
 
 .list-group-boys, .list-group-girls {
