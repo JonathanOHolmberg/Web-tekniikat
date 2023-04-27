@@ -11,7 +11,7 @@
 </head>
 <header>
     <nav class="navbar">
-      <nav class="navbar navbar-expand navbar-light bg-light">
+      <nav class="navbar navbar-expand navbar-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Gossip page</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,23 +37,23 @@
       </nav>
   </header>
 <body>
-  <main>
-    <div class="container" class="bg-gradient">
+  <main class="rounded p-3 mb-4">
+    <div class="container">
       <div class="row justify-content-center align-items-center">
           <div class="col-md-8 text-center">
-            <h1 class="display6">Leave some gossip about a girl or a boy.</h1>
-              <a href="#" class="btn btn-primary">Boys</a>
-              <a href="#" class="btn btn-primary">Girls</a>
+            <h1 class="text-center font-weight-bold mb-4">Leave some gossip.</h1>
+              <a href="#" class="btn btn-primary mx-1 mt-4 mb-2">Boys</a>
+              <a href="#" class="btn btn-primary mx-1 mt-4 mb-2">Girls</a>
           </div>
       </div>
     </div>
-      <div class="bg-info-subtle">
-        <h5 class="h5">Latest gossip</h5>
-        <h3 class="display-6">Boys</h3>
+      <div class="gossip-container">
+        <h2 class="text-center font-weight-bold mt-6 mb-6 display 5">Latest gossip</h5>
+        <h3 class="text-center font-weight-bold mt-6 mb-6 display 6">Boys</h3>
         <ul id="messageListBoys" class="list-group-boys">
             <!-- Viestit generoituvat tänne -->
         </ul>
-        <h3 class="display-6">Girls</h3>
+        <h3 class="text-center font-weight-bold mt-6 mb-6 display6">Girls</h3>
         <ul id="messageListGirls" class="list-group-girls">
             <!-- Viestit generoituvat tänne -->
         </ul>

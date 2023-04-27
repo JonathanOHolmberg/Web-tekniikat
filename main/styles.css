@@ -1,41 +1,13 @@
-body {
-    padding-left:2em;
-    padding-right:2em;
-    padding-top:1em;
-    background-image: var(--bs-gradient)!important;
+body, nav.navbar, main {
     background-color: #9aeaa0 !important;
+    padding:0em 1em 0.5em 1em ;
+    border-radius:1px !important;
 }
 
-nav.navbar {
-    background: #9aeaa4 !important;
-}
-
-main {
-    background-color: #9aeaa4;
-    border-radius: 1px;
-    padding:9px;
-    margin-bottom:20px;
-}
-
-h1, h2, h3, h5 {
-    display: flex;
-    justify-content: center;
-    font-weight: 700;
-    text-transform: uppercase;
-    color:#fff !important;
-}
-
-h5 {
-    font-weight:900;
-    margin-bottom:20px !important;
-}
-
-h1 {
-    margin: 40px !important;
-}
-.bg-info-subtle {
-    margin: 1em;
-    padding: 1em;
+.gossip-container {
+    background-color: #fff;
+    margin-top:1em;
+    padding-bottom:1em;
 }
 
 .form-group {
@@ -48,31 +20,16 @@ h1 {
     margin-bottom: 1em !important;
 }
 
-button.btn.btn-primary {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    border-radius: 1px;
-}
-a.btn.btn-primary {
-    width: 40%;
-    text-transform: uppercase;
-    border-radius: 1px;
-    margin-left: 4px;
-    margin-right:4px;
-    margin-top:20px;
-    margin-bottom:10px;
-}
+
 
 .list-group-boys, .list-group-girls {
     max-height: 250px;
     list-style-type: none !important;
-    padding: 2px;
+    padding: 4px;
     margin-bottom: 20px;
-  }
+}
 
-  .list-group-boys-item {
+.list-group-boys-item {
     padding: 10px !important;
     border: none !important;
     background: #ccc !important;
@@ -91,4 +48,58 @@ a.btn.btn-primary {
 
 li.nav-item {
     margin: 3px;
+}
+
+
+
+
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#fff !important;
+    font-size:4em !important;
+}
+
+h2, h3, h5 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#fff !important;
+    background:#232222 !important;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+}
+
+
+
+
+button.btn.btn-primary {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    border-radius: 1px;
+    background:#000 !important;
+    border: 2px solid #000 !important;
+}
+
+a.btn.btn-primary {
+    width: 40%;
+    text-transform: uppercase;
+    border-radius: 1px;
+    margin-left: 4px;
+    margin-right:4px;
+    margin-top:20px;
+    margin-bottom:10px;
+    background:#000 !important;
+    border: 2px solid #000 !important;
+}
+
+button.btn.btn-primary:hover {
+    opacity: 0.9;
+    border: 2px solid #9aeaa0 !important;
+}
+
+a.btn.btn-primary:hover {
+    opacity: 0.9;
+    border: 2px solid #09aeaa !important;
 }
