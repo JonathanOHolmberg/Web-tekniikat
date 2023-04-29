@@ -9,58 +9,105 @@
     <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Nunito%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.1.1" media="all">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
-<header>
-    <nav class="navbar bg-gradient">
-      <nav class="navbar bg-body-tertiary">
+<body>
+  <header>
+    <nav class="navbar">
+      <nav class="navbar navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Gossip page</a>
+          <a class="navbar-brand" href="index.html">Gossip page</a>
+          <div class="navbar-list" id="navbarList">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Front page</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Front page</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Boys</a>
+                <a class="nav-link active" aria-current="page" href="boys-gossip.html">Boys</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Girls</a>
+                <a class="nav-link active" aria-current="page" href="girls-gossip.html">Girls</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Wireframe</a>
+                <a class="nav-link" href="wireframe.html">Wireframe</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
   </header>
-<body>
-    <div class="container mt-5">
-        <h1 class="text-center font-weight-bold mb-4">Boys Gossip</h1>
-        <form id="myFormBoys">
-            <div class="form-group">
-                <label for="nameInput">username:</label>
-                <input type="text" class="form-control" id="nameInput" placeholder="Nimi">
+  <main>
+   <div class="container mt-5">
+    <div class="accordion" id="doubleAccordion">
+      <div class="card">
+        <div class="container mt-5" id="accContainer">
+          <div class="accordion" id="termsAccordion">
+            <div class="card">
+              <div class="card-header" id="termsHeader">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#termsCollapse" aria-expanded="true" aria-controls="termsCollapse">
+                    Page rules
+                  </button>
+                </h2>
+              </div>
+        
+              <div id="termsCollapse" class="collapse" aria-labelledby="termsHeader" data-parent="#termsAccordion">
+                <div class="card-body">
+                  <p>Rule: All users must agree to our terms and conditions before using the site.<br>            
+                    Rule: Users must not post any offensive or inappropriate content on the site.<br>            
+                    Rule: Users must not use the site for any illegal or unethical activities.<br>            
+                    Rule: Users must keep their account details confidential and secure.<br>            
+                    Rule: Users must not attempt to access any other user's account without their permission.<br>            
+                    Rule: Users must report any suspicious or malicious activity on the site immediately.<br>
+                    Rule: The site reserves the right to suspend or terminate any user account for violating our rules.<br><br>
+        
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac dui ultrices, tempor tellus quis, ultricies odio.
+                    Praesent id velit sapien. Sed lacinia turpis sed blandit malesuada.</p>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-                <label for="messageInput">Your gossip:</label>
-                <textarea class="form-control" id="messageInput" rows="3" placeholder="Juoru"></textarea>
+        
+            <div class="card">
+              <div class="card-header" id="gossipHeader">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#gossipCollapse" aria-expanded="false" aria-controls="gossipCollapse">
+                    Leave Gossip
+                  </button>
+                </h2>
+              </div>
+        
+              <div id="gossipCollapse" class="collapse" aria-labelledby="gossipHeader" data-parent="#termsAccordion">
+                <div class="card-body">
+                  <form id="myFormBoys">
+                    <div class="form-group">
+                      <label for="nameInput">username:</label>
+                      <input type="text" class="form-control" id="nameInput" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="messageInput">Your gossip:</label>
+                     <textarea class="form-control" id="messageInput" rows="3" placeholder="Gossip"></textarea>
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="importantCheckbox">
+                      <label class="form-check-label" for="importantCheckbox">Make juicy:</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                  </form>
+                </div>
+              </div>
             </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="importantCheckbox">
-                <label class="form-check-label" for="importantCheckbox">Make juicy:</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-        <hr>
-        <h2 class="text-center font-weight-bold mt-6 mb-6 display 5">Latest Hot Gossip:</h2>
-        <ul id="messageListBoys" class="list-group-boys" loaded="no">
+          </div>
+        </div>
+      <h2 class="text-center font-weight-bold mt-6 mb-6">Latest Hot Gossip</h2>
+      <ul id="messageListBoys" class="list-group-boys" loaded="no">
             <!-- Messages -->
-        </ul>
+      </ul>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="generate-message-history-boys.js"></script>
-    <script src="submit-form-boys.js"></script>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="generate-message-history-boys.js"></script>
+  <script src="submit-form-boys.js"></script>
 </body>
 
 </html>

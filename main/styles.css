@@ -1,13 +1,35 @@
-body, nav.navbar, main {
+body, main {
     background-color: #9aeaa0 !important;
-    padding:0em 1em 0.5em 1em ;
+    padding:0em 0em 0.5em 1em ;
     border-radius:1px !important;
 }
 
-.gossip-container {
+.gossip-container, ul#messageListGirls, ul#messageListBoys {
     background-color: #fff;
     margin-top:1em;
     padding-bottom:1em;
+}
+
+#accContainer {
+    padding:0 !important;
+    margin:0 !important;
+    background-color: #9aeaa0 !important;
+}
+
+.card {
+    border: 0px !important;
+}
+
+div#termsHeader, div#gossipHeader  {
+    background: #9aeaa0;
+    border: 0px;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+div#itemHeader {
+    padding: 0px !important;
+    display:inline;
 }
 
 .form-group {
@@ -32,13 +54,13 @@ body, nav.navbar, main {
 .list-group-boys-item {
     padding: 10px !important;
     border: none !important;
-    background: #ccc !important;
+    background: #9de1f2 !important;
   }
 
   .list-group-girls-item {
     padding: 10px !important;
     border: none !important;
-    background: #aaa !important;
+    background: #f29ddf !important;
   }
 
   ul.navbar-nav {
@@ -61,7 +83,7 @@ h1 {
 }
 
 h2, h3, h5 {
-    font-weight: 700;
+    font-weight: 1000;
     text-transform: uppercase;
     color:#fff !important;
     background:#232222 !important;
@@ -69,8 +91,23 @@ h2, h3, h5 {
     padding-bottom:0.5em;
 }
 
+h2.mb-0 {
+    margin-bottom: 0!important;
+    justify-content: center !important;
+    display: flex;
+}
 
 
+
+
+button.btn.btn-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 2.5em;
+    overflow:hidden;
+}
 
 button.btn.btn-primary {
     width: 60%;
@@ -93,6 +130,8 @@ a.btn.btn-primary {
     background:#000 !important;
     border: 2px solid #000 !important;
 }
+
+
 
 button.btn.btn-primary:hover {
     opacity: 0.9;
